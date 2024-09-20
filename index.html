@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pragmatism - Coming Soon</title>
+    
+    <!-- Google Fonts: Playfair Display -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&display=swap" rel="stylesheet">
+    
+    <style>
+        /* Basic Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Set body styles */
+        body {
+            background-color: #e70815; /* Background color */
+            color: #ffffff; /* White text for contrast */
+            font-family: 'Playfair Display', 'Futura', sans-serif; /* Main and secondary fonts */
+            height: 100vh; /* Full viewport height */
+            display: flex;
+            justify-content: center; /* Center horizontally */
+            align-items: center; /* Center vertically */
+            text-align: center;
+        }
+
+        /* Container for content */
+        .container {
+            max-width: 800px;
+            padding: 20px;
+        }
+
+        /* Company Name Styling */
+        .company-name {
+            font-size: 72px; /* Large font size */
+            margin-bottom: 20px;
+            font-weight: 400; /* Normal weight */
+            /* Removed font-weight: 900; */
+        }
+
+        /* Coming Soon Text Styling */
+        .coming-soon {
+            font-size: 48px; /* Large font size */
+            font-weight: 400; /* Normal weight */
+            /* Removed font-weight: 400; if previously different */
+        }
+
+        /* Tagline Styling */
+        .tagline {
+            font-size: 24px; /* Appropriate font size for tagline */
+            font-family: 'Futura', sans-serif; /* Secondary font */
+            margin-top: 10px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .company-name {
+                font-size: 48px;
+            }
+
+            .coming-soon {
+                font-size: 32px;
+            }
+
+            .tagline {
+                font-size: 20px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .company-name {
+                font-size: 36px;
+            }
+
+            .coming-soon {
+                font-size: 24px;
+            }
+
+            .tagline {
+                font-size: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="company-name">Pragmatism</h1>
+        <p class="tagline">People | Project | Problems</p>
+        <p class="coming-soon">Coming Soon</p>
+        
+    </div>
+</body>
+</html>
