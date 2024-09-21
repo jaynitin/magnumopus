@@ -3,95 +3,201 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="favicon.ico" sizes="32x32">
     <title>Pragmatism - Coming Soon</title>
-    
-    <!-- Google Fonts: Playfair Display -->
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&display=swap" rel="stylesheet">
-    
     <style>
-        /* Basic Reset */
-        * {
+        body {
+            background-color: #ffffff; 
+            font-family: 'Playfair Display', serif; 
             margin: 0;
             padding: 0;
-            box-sizing: border-box;
+            display: flex;
+            justify-content: center; 
+            align-items: center; 
+            height: 100vh;
+            flex-direction: column; 
+            color: #000000; 
+        }
+        
+        h1 {
+            font-size: 3em;
+            margin: 0;
+            color: #000000;
         }
 
-        /* Set body styles */
-        body {
-            background-color: #e70815; /* Background color */
-            color: #ffffff; /* White text for contrast */
-            font-family: 'Playfair Display', 'Futura', sans-serif; /* Main and secondary fonts */
-            height: 100vh; /* Full viewport height */
-            display: flex;
-            justify-content: center; /* Center horizontally */
-            align-items: center; /* Center vertically */
+        h1 span {
+            color: #e70815; 
+        }
+
+        p.tagline {
+            font-family: 'Futura', sans-serif; 
+            font-size: 1.2em;
+            margin: 10px 0 30px 0; 
+        }
+
+        .progress-container {
+            width: 50%;
+            max-width: 600px;
+            margin-bottom: 40px; 
+        }
+
+        .progress-bar {
+            width: 100%;
+            background-color: #ddd;
+            height: 20px;
+            border-radius: 10px;
+            margin-bottom: 15px;
+            position: relative;
+        }
+
+        .progress-bar-inner {
+            height: 100%;
+            width: 0%;
+            background-color: #e70815; 
+            border-radius: 10px;
+            transition: width 1s ease-in-out;
+        }
+
+        .progress-title {
+            font-family: 'Futura', sans-serif;
+            font-size: 1em;
+            margin-bottom: 5px;
+            text-align: left;
+        }
+
+        @keyframes loadLegal {
+            from { width: 0%; }
+            to { width: 20%; } 
+        }
+
+        @keyframes loadFunctional {
+            from { width: 0%; }
+            to { width: 80%; } 
+        }
+
+        .legal .progress-bar-inner {
+            animation: loadLegal 2s forwards;
+        }
+
+        .functional .progress-bar-inner {
+            animation: loadFunctional 2s forwards;
+        }
+        footer {
+            position: absolute;
+            bottom: 20px;
+            width: 100%;
             text-align: center;
         }
 
-        /* Container for content */
-        .container {
-            max-width: 800px;
-            padding: 20px;
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
         }
 
-        /* Company Name Styling */
-        .company-name {
-            font-size: 72px; /* Large font size */
-            margin-bottom: 20px;
-            font-weight: 400; /* Normal weight */
-            /* Removed font-weight: 900; */
+        .social-icon {
+            width: 30px;
+            height: 30px;
+            fill: #000000;
+            transition: fill 0.3s ease, transform 0.3s ease;
         }
 
-        /* Coming Soon Text Styling */
-        .coming-soon {
-            font-size: 48px; /* Large font size */
-            font-weight: 400; /* Normal weight */
-            /* Removed font-weight: 400; if previously different */
+        .social-icon:hover {
+            fill: #e70815; 
+            transform: scale(1.1); 
         }
 
-        /* Tagline Styling */
-        .tagline {
-            font-size: 24px; /* Appropriate font size for tagline */
-            font-family: 'Futura', sans-serif; /* Secondary font */
-            margin-top: 10px;
-        }
-
-        /* Responsive Design */
         @media (max-width: 768px) {
-            .company-name {
-                font-size: 48px;
+            .progress-container {
+                width: 70%;
             }
 
-            .coming-soon {
-                font-size: 32px;
+            h1 {
+                font-size: 2.5em;
             }
 
-            .tagline {
-                font-size: 20px;
+            p.tagline {
+                font-size: 1em;
+            }
+
+            .progress-bar {
+                height: 18px;
+            }
+
+            .progress-bar-inner {
+                height: 100%;
+            }
+
+            .social-icon {
+                width: 25px;
+                height: 25px;
             }
         }
 
         @media (max-width: 480px) {
-            .company-name {
-                font-size: 36px;
+            .progress-container {
+                width: 90%;
             }
 
-            .coming-soon {
-                font-size: 24px;
+            h1 {
+                font-size: 2em;
             }
 
-            .tagline {
-                font-size: 16px;
+            p.tagline {
+                font-size: 0.9em;
+            }
+
+            .progress-bar {
+                height: 16px;
+            }
+
+            .progress-bar-inner {
+                height: 100%;
+            }
+
+            .social-icon {
+                width: 20px;
+                height: 20px;
             }
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1 class="company-name">Pragmatism</h1>
-        <p class="tagline">A consulting firm.</p>
-        <p class="coming-soon">Business functional,Website and Legal Papers coming soon.</p>
-        
+
+    <h1><span>P</span>ragmatism</h1>
+    <p class="tagline">A consulting firm. Taking questions .</p>
+    <p class="tagline"></p>
+    <div class="progress-container">
+        <div class="progress-title">Legal: Now Filling SPICe+</div>
+        <div class="progress-bar legal">
+            <div class="progress-bar-inner"></div>
+        </div>
+
+        <div class="progress-title">Functional: Taking Clients</div>
+        <div class="progress-bar functional">
+            <div class="progress-bar-inner"></div>
+        </div>
     </div>
+
+    <footer>
+        <div class="social-links">
+            <a href="https://www.linkedin.com/company/your-linkedin-page" target="_blank" class="linkedin-link" aria-label="Pragmatism LinkedIn">
+                <svg class="social-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                    <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.762 2.239 5 5 5h14c2.762 0 5-2.238 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-10h3v10zm-1.5-11.268c-.966 0-1.75-.785-1.75-1.75s.784-1.75 1.75-1.75 1.75.785 1.75 1.75-.784 1.75-1.75 1.75zm13.5 11.268h-3v-5.604c0-1.337-.024-3.067-1.868-3.067-1.869 0-2.155 1.46-2.155 2.967v5.705h-3v-10h2.883v1.367h.041c.402-.76 1.384-1.56 2.849-1.56 3.051 0 3.611 2.007 3.611 4.62v5.582z"/>
+                </svg>
+            </a>
+            <a href="https://github.com/Pix3lB/magnumopus" target="_blank" class="github-link" aria-label="Pragmatism GitHub Repository">
+                <svg class="social-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                    <path d="M12 0.5C5.37 0.5 0 5.87 0 12.5C0 17.88 3.438 22.092 8.205 23.544C8.805 23.654 9.025 23.301 9.025 23.0C9.025 22.688 9.015 22.062 9.01 21.123C5.672 21.89 4.968 19.544 4.968 19.544C4.422 18.172 3.633 17.828 3.633 17.828C2.546 17.103 3.717 17.12 3.717 17.12C4.922 17.205 5.555 18.365 5.555 18.365C6.627 20.164 8.359 19.653 9.048 19.387C9.157 18.617 9.455 18.118 9.78 17.828C7.098 17.538 4.282 16.455 4.282 11.653C4.282 10.263 4.714 9.118 5.475 8.238C5.35 7.947 5.008 6.762 5.688 5.114C5.688 5.114 6.705 4.788 9.0 6.33C9.966 6.062 11.0 5.928 12.0 5.923C13.0 5.928 14.034 6.062 15.0 6.33C17.295 4.788 18.312 5.114 18.312 5.114C18.992 6.762 18.65 7.947 18.525 8.238C19.286 9.118 19.718 10.263 19.718 11.653C19.718 16.465 16.898 17.536 14.22 17.82C14.63 18.194 15.0 19.0 15.0 20.14C15.0 21.52 15.0 22.687 15.0 23.0C15.0 23.3 15.22 23.658 15.83 23.544C20.595 22.092 24 17.88 24 12.5C24 5.87 18.63 0.5 12 0.5Z"/>
+                </svg>
+            <a href="mailto:sales@pragmatism.in" target="_blank" class="email-link" aria-label="Email Pragmatism">
+                <svg class="social-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                    <path d="M12 12.713L0 5.25V18c0 1.103.897 2 2 2h20c1.103 0 2-.897 2-2V5.25l-12 7.463zM22 4H2C.897 4 0 4.897 0 6v.217l12 7.462 12-7.462V6c0-1.103-.897-2-2-2z"/>
+                </svg>
+            </a>  
+            </a>
+        </div>
+    </footer>
+
 </body>
 </html>
