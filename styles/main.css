@@ -29,6 +29,8 @@ main {
     text-align: center;
     border-radius: 8px;
     margin-bottom: 20px;
+    justify-content: center;
+    flex-direction: column;
 }
 
 .hero h1 {
@@ -41,7 +43,7 @@ main {
     margin-bottom: 20px;
 }
 
-.btn {
+.btn1 {
     background-color: #e70815;;
     color: white;
     padding: 10px 20px;
@@ -89,6 +91,12 @@ main {
 .social-icon:hover {
     fill: #e70815; 
     transform: scale(1.1); 
+}
+
+.card{
+    position: relative;
+    margin: auto;
+    justify-content: space-around ;
 }
 
 footer {
@@ -156,6 +164,33 @@ footer {
         position: STICKY;
         bottom: 0;
     }
+}
+
+.funky-cards {
+    position: relative;
+    padding: 20px;
+    perspective: 1000px;
+}
+
+.funky-card {
+    transform: rotate(-5deg) skewX(-5deg);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+    margin: 20px;
+}
+
+.funky-card:nth-child(2) {
+    transform: rotate(5deg) skewX(5deg);
+}
+
+.funky-card:nth-child(3) {
+    transform: rotate(-10deg) skewX(-10deg);
+}
+
+/* On hover, cards go back to normal and float up */
+.funky-card:hover {
+    transform: rotate(0deg) skewX(0deg) scale(1.1);
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
 }
 
 
