@@ -1,0 +1,161 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    padding: 20px;
+    height: 83vh;
+    flex: 1; 
+    min-height: calc(100vh - 60px);
+    background-image: url("/Icons/banner.jpg");
+    background-size:cover;
+    background-repeat: no-repeat;
+}
+
+.hero {
+    color: #fff;
+    padding: 50px 20px;
+    text-align: center;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.btn {
+    background-color: #e70815;;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #e70815;;
+}
+
+.content {
+    text-align: center;
+}
+
+.content h2 {
+    margin-bottom: 20px;
+}
+
+.service-card {
+    background: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+#serviceHeading{
+    color: #f4f4f4;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+}
+
+.social-icon {
+    width: 30px;
+    height: 30px;
+    fill: #000000;
+    transition: fill 0.3s ease, transform 0.3s ease;
+}
+
+.social-icon:hover {
+    fill: #e70815; 
+    transform: scale(1.1); 
+}
+
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background-color: #333;
+    color: #fff;
+    position: relative;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2rem;
+    }
+    
+    .hero p {
+        font-size: 1rem;
+    }
+
+    .btn {
+        padding: 10px;
+        font-size: 0.9rem;
+    }
+
+    .service-card {
+        margin: 10px 0; /* Stack cards vertically on smaller screens */
+    }
+
+    .social-icon {
+        width: 25px;
+        height: 25px;
+    }
+
+    footer{
+        position: sticky;
+        bottom: 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero h1 {
+        font-size: 1.5rem;
+    }
+
+    .hero p {
+        font-size: 0.9rem;
+    }
+
+    .service-card {
+        padding: 15px;
+    }
+
+    .btn {
+        width: 100%; /* Full-width button on mobile */
+        padding: 12px;
+    }
+
+    .social-icon {
+        width: 20px;
+        height: 20px;
+    }
+
+    footer{
+        position: STICKY;
+        bottom: 0;
+    }
+}
+
+

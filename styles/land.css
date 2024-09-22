@@ -1,0 +1,154 @@
+body {
+    background-color: #ffffff; 
+    font-family: 'Playfair Display', serif; 
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    height: 100vh;
+    flex-direction: column; 
+    color: #000000; 
+}
+
+h1 {
+    font-size: 3em;
+    margin: 0;
+    color: #000000;
+}
+
+h1 span {
+    color: #e70815; 
+}
+
+p.tagline {
+    font-family: 'Futura', sans-serif; 
+    font-size: 1.2em;
+    margin: 10px 0 30px 0; 
+}
+
+.progress-container {
+    width: 50%;
+    max-width: 600px;
+    margin-bottom: 40px; 
+}
+
+.progress-bar {
+    width: 100%;
+    background-color: #ddd;
+    height: 20px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    position: relative;
+}
+
+.progress-bar-inner {
+    height: 100%;
+    width: 0%;
+    background-color: #e70815; 
+    border-radius: 10px;
+    transition: width 1s ease-in-out;
+}
+
+.progress-title {
+    font-family: 'Futura', sans-serif;
+    font-size: 1em;
+    margin-bottom: 5px;
+    text-align: left;
+}
+
+@keyframes loadLegal {
+    from { width: 0%; }
+    to { width: 20%; } 
+}
+
+@keyframes loadFunctional {
+    from { width: 0%; }
+    to { width: 80%; } 
+}
+
+.legal .progress-bar-inner {
+    animation: loadLegal 2s forwards;
+}
+
+.functional .progress-bar-inner {
+    animation: loadFunctional 2s forwards;
+}
+footer {
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    text-align: center;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.social-icon {
+    width: 30px;
+    height: 30px;
+    fill: #000000;
+    transition: fill 0.3s ease, transform 0.3s ease;
+}
+
+.social-icon:hover {
+    fill: #e70815; 
+    transform: scale(1.1); 
+}
+
+@media (max-width: 768px) {
+    .progress-container {
+        width: 70%;
+    }
+
+    h1 {
+        font-size: 2.5em;
+    }
+
+    p.tagline {
+        font-size: 1em;
+    }
+
+    .progress-bar {
+        height: 18px;
+    }
+
+    .progress-bar-inner {
+        height: 100%;
+    }
+
+    .social-icon {
+        width: 25px;
+        height: 25px;
+    }
+}
+
+@media (max-width: 480px) {
+    .progress-container {
+        width: 90%;
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+
+    p.tagline {
+        font-size: 0.9em;
+    }
+
+    .progress-bar {
+        height: 16px;
+    }
+
+    .progress-bar-inner {
+        height: 100%;
+    }
+
+    .social-icon {
+        width: 20px;
+        height: 20px;
+    }
+}
